@@ -1,0 +1,6 @@
+{
+  "name": "YAL Électricité",
+  "description": "Site officiel de YAL Électricité : Devis & Rendez-vous, Installation, Rénovation haut de gamme, Dépannage et Urgence 24/7.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
