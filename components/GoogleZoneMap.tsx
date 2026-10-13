@@ -30,7 +30,7 @@ const REGIONAL_HUBS: HubZone[] = [
     name: 'Annemasse & Grand Genève',
     department: '74',
     delay: '20 à 30 min',
-    description: 'Bassin d\'intervention prioritaire depuis notre siège réel au 4 Allée des Champs Jacquis.',
+    description: 'Bassin d\'intervention prioritaire avec présence quotidienne sur le secteur.',
     communes: ['Annemasse', 'Ville-la-Grand', 'Gaillard', 'Ambilly', 'Vétraz-Monthoux', 'Cranves-Sales', 'Bonne', 'Saint-Julien-en-Genevois'],
     popularInterventions: ['Dépannage tableau 24/7', 'Rénovation appartement', 'Mise en conformité NFC 15-100'],
   },
@@ -90,7 +90,7 @@ export function GoogleZoneMap() {
       <div className="bg-neutral-950 text-white p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-neutral-800">
         <div className="space-y-2">
           <div className="flex items-center gap-2">
-            <span className="px-2.5 py-0.5 rounded text-[11px] font-semibold bg-amber-500/20 text-amber-300 border border-amber-400/30">
+            <span className="px-2.5 py-0.5 rounded text-[11px] font-semibold bg-blue-500/20 text-blue-300 border border-blue-400/30">
               Artisan de Proximité
             </span>
             <span className="flex items-center gap-1.5 text-emerald-400 text-xs font-medium">
@@ -108,30 +108,30 @@ export function GoogleZoneMap() {
             <span className="text-amber-400 font-bold">{COMPANY_INFO.googleRating} ★</span>
             <span className="text-neutral-400">Note d'excellence</span>
             <span className="text-neutral-600">·</span>
-            <span className="text-neutral-300">Siège : {COMPANY_INFO.address.city} (74100)</span>
+            <span className="text-neutral-300">Service 100% itinérant · Déplacement direct sur site</span>
           </div>
         </div>
 
         <div className="flex items-center gap-3 shrink-0">
           <a
             href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
-            className="px-5 py-3 bg-amber-500 hover:bg-amber-400 text-neutral-950 font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center gap-2"
+            className="px-5 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center gap-2 border border-blue-400/30"
           >
-            <Phone className="w-4 h-4 fill-neutral-950" />
+            <Phone className="w-4 h-4 fill-white text-white" />
             <span>Appeler : {COMPANY_INFO.phoneOffice}</span>
           </a>
         </div>
       </div>
 
       {/* Crucial Multi-Zone Clarification Banner */}
-      <div className="bg-amber-50 border-b border-amber-200/80 px-6 sm:px-8 py-3.5 text-xs text-amber-950 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+      <div className="bg-blue-50/80 border-b border-blue-200/80 px-6 sm:px-8 py-3.5 text-xs text-blue-950 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
         <div className="flex items-start sm:items-center gap-2.5">
-          <Sparkles className="w-4 h-4 text-amber-600 shrink-0 mt-0.5 sm:mt-0" />
+          <Sparkles className="w-4 h-4 text-blue-600 shrink-0 mt-0.5 sm:mt-0" />
           <p className="leading-relaxed">
-            <strong>Zones desservies :</strong> Grenoble, Annecy, Chambéry, Annemasse, Thonon, Évian — <span className="font-semibold text-amber-900">ainsi que toutes les villes, agglomérations et communes situées autour et entre ces secteurs.</span>
+            <strong>Zones desservies :</strong> Grenoble, Annecy, Chambéry, Annemasse, Thonon, Évian — <span className="font-semibold text-blue-950">ainsi que toutes les villes, agglomérations et communes situées autour et entre ces secteurs.</span>
           </p>
         </div>
-        <span className="text-[11px] font-semibold text-amber-800 shrink-0 uppercase tracking-wider">
+        <span className="text-[11px] font-semibold text-blue-700 shrink-0 uppercase tracking-wider">
           Déplacement rapide
         </span>
       </div>
@@ -154,13 +154,13 @@ export function GoogleZoneMap() {
                 onClick={() => setActiveHub(hub)}
                 className={`p-3 rounded-xl border text-left transition-all text-xs flex flex-col justify-between ${
                   isSelected
-                    ? 'bg-neutral-950 text-white border-neutral-950 shadow-md ring-1 ring-amber-400/40'
+                    ? 'bg-neutral-950 text-white border-neutral-950 shadow-md ring-1 ring-blue-500/40'
                     : 'bg-white text-neutral-800 border-neutral-200/80 hover:border-neutral-400'
                 }`}
               >
                 <div>
                   <span className={`inline-block px-1.5 py-0.5 rounded text-[10px] font-bold mb-1.5 ${
-                    isSelected ? 'bg-amber-400 text-neutral-950' : 'bg-neutral-100 text-neutral-700'
+                    isSelected ? 'bg-blue-600 text-white' : 'bg-neutral-100 text-neutral-700'
                   }`}>
                     {hub.department}
                   </span>
@@ -168,7 +168,7 @@ export function GoogleZoneMap() {
                     {hub.name.split(' & ')[0]}
                   </div>
                 </div>
-                <div className={`mt-2 text-[10px] ${isSelected ? 'text-amber-300 font-medium' : 'text-neutral-500'}`}>
+                <div className={`mt-2 text-[10px] ${isSelected ? 'text-blue-300 font-medium' : 'text-neutral-500'}`}>
                   {hub.delay}
                 </div>
               </button>
@@ -183,7 +183,7 @@ export function GoogleZoneMap() {
         <div className="lg:col-span-7 space-y-6">
           <div className="space-y-2">
             <div className="flex items-center gap-2">
-              <span className="text-xs uppercase tracking-wider text-amber-600 font-bold">
+              <span className="text-xs uppercase tracking-wider text-blue-600 font-bold">
                 Pôle Actif ({activeHub.department})
               </span>
               <span className="text-neutral-300">·</span>
@@ -216,7 +216,7 @@ export function GoogleZoneMap() {
                   {commune}
                 </span>
               ))}
-              <span className="px-3 py-1.5 bg-amber-50 text-amber-900 border border-amber-200 rounded-lg text-xs font-medium">
+              <span className="px-3 py-1.5 bg-blue-50 text-blue-950 border border-blue-200 rounded-lg text-xs font-medium">
                 + Toutes localités environnantes
               </span>
             </div>
@@ -233,7 +233,7 @@ export function GoogleZoneMap() {
                   key={iIdx}
                   className="p-3 bg-neutral-50 rounded-xl border border-neutral-100 text-xs text-neutral-700 flex items-center gap-2"
                 >
-                  <CheckCircle2 className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                   <span className="font-medium">{item}</span>
                 </div>
               ))}
@@ -244,8 +244,8 @@ export function GoogleZoneMap() {
         {/* Right Column: Direct Conversion Card with Clear CTA */}
         <div className="lg:col-span-5 bg-neutral-950 text-white p-6 sm:p-8 rounded-2xl border border-neutral-900 space-y-6">
           <div className="space-y-2">
-            <div className="flex items-center gap-2 text-amber-400 text-xs font-bold">
-              <Zap className="w-4 h-4 fill-amber-400" />
+            <div className="flex items-center gap-2 text-blue-400 text-xs font-bold">
+              <Zap className="w-4 h-4 fill-blue-400" />
               <span>BESOIN D'UN ÉLECTRICIEN SUR CE SECTEUR ?</span>
             </div>
             <h4 className="text-xl font-bold text-white">
@@ -259,9 +259,9 @@ export function GoogleZoneMap() {
           <div className="space-y-3 pt-1">
             <a
               href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
-              className="w-full py-4 bg-amber-500 hover:bg-amber-400 text-neutral-950 font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2.5"
+              className="w-full py-4 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2.5 border border-blue-400/30"
             >
-              <Phone className="w-4 h-4 fill-neutral-950" />
+              <Phone className="w-4 h-4 fill-white text-white" />
               <span>Appeler le {COMPANY_INFO.phoneOffice}</span>
             </a>
 
@@ -269,14 +269,14 @@ export function GoogleZoneMap() {
               href={`sms:${COMPANY_INFO.phoneMobileRaw}?body=Bonjour%20YAL%20%C3%89lectricit%C3%A9%2C%20je%20suis%20situ%C3%A9%20%C3%A0%20${encodeURIComponent(activeHub.name.split(' & ')[0])}%20et%20je%20souhaite%20une%20intervention%20pour...`}
               className="w-full py-3.5 bg-neutral-900 hover:bg-neutral-800 text-white border border-neutral-700 font-semibold text-xs rounded-xl transition-colors flex items-center justify-center gap-2"
             >
-              <MessageSquare className="w-4 h-4 text-amber-400" />
+              <MessageSquare className="w-4 h-4 text-blue-400" />
               <span>Envoyer un SMS direct</span>
             </a>
           </div>
 
           <div className="pt-4 border-t border-neutral-800 grid grid-cols-2 gap-3 text-[11px] text-neutral-400">
             <div className="flex items-center gap-1.5">
-              <Clock className="w-3.5 h-3.5 text-amber-400 shrink-0" />
+              <Clock className="w-3.5 h-3.5 text-blue-400 shrink-0" />
               <span>Arrivée : {activeHub.delay}</span>
             </div>
             <div className="flex items-center gap-1.5">

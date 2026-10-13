@@ -22,11 +22,11 @@ export function Footer() {
             </p>
             <div className="flex flex-wrap gap-2 pt-2">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-neutral-100 text-neutral-800 rounded text-xs font-medium">
-                <ShieldCheck className="w-3.5 h-3.5 text-amber-600" />
+                <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
                 Garantie Décennale AXA
               </span>
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-neutral-100 text-neutral-800 rounded text-xs font-medium">
-                <Zap className="w-3.5 h-3.5 text-amber-600" />
+                <Zap className="w-3.5 h-3.5 text-blue-600" />
                 Norme NFC 15-100
               </span>
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-neutral-100 text-neutral-800 rounded text-xs font-medium">
@@ -62,7 +62,7 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/depannage-urgence" className="text-neutral-600 hover:text-neutral-950 transition-colors flex items-center gap-1 text-amber-700 font-medium">
+                <Link href="/depannage-urgence" className="text-neutral-600 hover:text-neutral-950 transition-colors flex items-center gap-1 text-blue-700 font-medium">
                   Dépannage & Urgence 24/7
                 </Link>
               </li>
@@ -101,9 +101,9 @@ export function Footer() {
             <div className="space-y-2.5 text-xs text-neutral-600">
               <a
                 href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
-                className="flex items-center gap-2 text-neutral-950 font-bold hover:text-amber-600 transition-colors"
+                className="flex items-center gap-2 text-neutral-950 font-bold hover:text-blue-600 transition-colors"
               >
-                <Phone className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />
+                <Phone className="w-3.5 h-3.5 text-blue-600 fill-blue-600" />
                 <span>Appel : {COMPANY_INFO.phoneOffice}</span>
               </a>
 
@@ -114,9 +114,9 @@ export function Footer() {
                 </div>
                 <a
                   href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
-                  className="text-xs font-bold text-amber-700 hover:text-amber-800 flex items-center gap-1"
+                  className="text-xs font-bold text-blue-700 hover:text-blue-800 flex items-center gap-1"
                 >
-                  <Phone className="w-3 h-3 fill-amber-700" />
+                  <Phone className="w-3 h-3 fill-blue-700 text-blue-700" />
                   <span>{COMPANY_INFO.phoneOffice}</span>
                 </a>
               </div>
@@ -125,7 +125,7 @@ export function Footer() {
                 href={`sms:${COMPANY_INFO.phoneMobileRaw}?body=Bonjour%20YAL%20%C3%89lectricit%C3%A9...`}
                 className="flex items-center gap-2 hover:text-neutral-950 transition-colors"
               >
-                <span className="text-amber-500 font-bold">SMS :</span>
+                <span className="text-blue-600 font-bold">SMS :</span>
                 <span className="font-semibold text-neutral-900">{COMPANY_INFO.phoneMobile}</span>
               </a>
 
@@ -139,7 +139,7 @@ export function Footer() {
 
               <div className="flex items-start gap-2 pt-1 text-neutral-600">
                 <MapPin className="w-3.5 h-3.5 text-neutral-400 shrink-0 mt-0.5" />
-                <span>{COMPANY_INFO.address.full}</span>
+                <span>Interventions directes sur site · Service itinérant</span>
               </div>
             </div>
           </div>
@@ -151,7 +151,7 @@ export function Footer() {
             © {currentYear} {COMPANY_INFO.name}. Tous droits réservés.
           </div>
           <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-            <span>{COMPANY_INFO.address.full}</span>
+            <span>Interventions en Haute-Savoie, Savoie & Isère</span>
             <a
               href="https://novaris-studio.com"
               target="_blank"

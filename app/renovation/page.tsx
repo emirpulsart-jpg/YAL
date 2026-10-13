@@ -31,7 +31,7 @@ const RENOVATION_PILLARS = [
 
 export default function RenovationPage() {
   return (
-    <div className="w-full bg-white selection:bg-amber-400 selection:text-neutral-950 py-12 lg:py-20">
+    <div className="w-full bg-white selection:bg-blue-600 selection:text-white py-12 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Header Breadcrumb & Titles */}
         <div className="max-w-3xl space-y-4">
@@ -53,11 +53,11 @@ export default function RenovationPage() {
 
           <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-semibold text-neutral-800">
             <span className="flex items-center gap-1.5 px-3 py-1.5 bg-neutral-100 rounded-lg">
-              <ShieldCheck className="w-4 h-4 text-amber-600" />
+              <ShieldCheck className="w-4 h-4 text-blue-600" />
               Garantie Décennale 10 Ans
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1.5 bg-neutral-100 rounded-lg">
-              <Sparkles className="w-4 h-4 text-amber-600" />
+              <Sparkles className="w-4 h-4 text-blue-600" />
               Finitions Soignées & Alignement Laser
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1.5 bg-neutral-100 rounded-lg">
@@ -80,7 +80,7 @@ export default function RenovationPage() {
           </div>
 
           <div className="lg:col-span-5 space-y-6">
-            <span className="text-xs font-bold uppercase tracking-wider text-amber-600">
+            <span className="text-xs font-bold uppercase tracking-wider text-blue-600">
               Le Savoir-Faire Artisanal
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold text-neutral-950 leading-tight">
@@ -92,15 +92,15 @@ export default function RenovationPage() {
 
             <ul className="space-y-3 pt-2 text-xs text-neutral-800">
               <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                 <span>Protection des parquets anciens, moulures et menuiseries lors du chantier.</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                 <span>Plans d'implantation précis et repérage systématique sur plan.</span>
               </li>
               <li className="flex items-start gap-2.5">
-                <Check className="w-4 h-4 text-amber-600 shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
                 <span>Nettoyage soigné du chantier chaque soir.</span>
               </li>
             </ul>
@@ -111,7 +111,7 @@ export default function RenovationPage() {
                 className="inline-flex items-center gap-2 px-5 py-3.5 bg-neutral-950 hover:bg-neutral-800 text-white rounded-xl text-xs font-semibold tracking-wide transition-all shadow-md"
               >
                 <span>Planifier une visite technique d'évaluation</span>
-                <ArrowRight className="w-4 h-4 text-amber-400" />
+                <ArrowRight className="w-4 h-4 text-blue-400" />
               </Link>
             </div>
           </div>
@@ -120,7 +120,7 @@ export default function RenovationPage() {
         {/* 4 Pillars of Excellence */}
         <div className="space-y-6">
           <div className="space-y-1">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-amber-600">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-blue-600">
               Exigences & Engagements
             </h3>
             <h4 className="text-2xl sm:text-3xl font-extrabold text-neutral-950 tracking-tight">
@@ -136,7 +136,7 @@ export default function RenovationPage() {
               >
                 <div className="flex items-center justify-between">
                   <h5 className="text-lg font-bold text-neutral-950">{pillar.title}</h5>
-                  <span className="text-amber-500 text-sm font-bold">0{idx + 1}</span>
+                  <span className="text-blue-500 text-sm font-bold">0{idx + 1}</span>
                 </div>
                 <p className="text-xs text-neutral-600 leading-relaxed">
                   {pillar.description}
@@ -149,7 +149,7 @@ export default function RenovationPage() {
         {/* Typologies */}
         <div className="p-8 sm:p-12 rounded-3xl bg-neutral-950 text-white space-y-6">
           <div className="max-w-xl space-y-2">
-            <span className="text-xs uppercase text-amber-400 font-bold">Typologies de Biens</span>
+            <span className="text-xs uppercase text-blue-400 font-bold">Typologies de Biens</span>
             <h3 className="text-2xl font-bold text-white">Nous intervenons sur tous types de projets</h3>
           </div>
 
@@ -190,7 +190,7 @@ export default function RenovationPage() {
             </Link>
             <a
               href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
-              className="w-full sm:w-auto px-5 py-3 bg-amber-500 hover:bg-amber-400 text-neutral-950 text-xs font-bold rounded-xl text-center border border-amber-300/40"
+              className="w-full sm:w-auto px-5 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-bold rounded-xl text-center border border-blue-400/30 shadow-md"
             >
               Appel direct : {COMPANY_INFO.phoneOffice}
             </a>

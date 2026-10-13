@@ -47,11 +47,11 @@ const URGENCY_FAULTS = [
 
 export default function DepannageUrgencePage() {
   return (
-    <div className="w-full bg-white selection:bg-amber-400 selection:text-neutral-950 py-10 lg:py-16">
+    <div className="w-full bg-white selection:bg-blue-600 selection:text-white py-10 lg:py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-14">
         {/* Urgent Emergency Banner */}
         <div className="rounded-3xl bg-neutral-950 text-white p-8 sm:p-12 border border-neutral-900 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
+          <div className="absolute top-0 right-0 w-96 h-96 bg-blue-500/15 rounded-full blur-3xl pointer-events-none" />
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
             <div className="lg:col-span-7 space-y-6">
@@ -61,13 +61,13 @@ export default function DepannageUrgencePage() {
                   Dépannage d'Urgence Immédiat
                 </span>
                 <span className="text-neutral-400 text-xs">
-                  Délai moyen constaté : <strong className="text-amber-400">Moins de 45 min</strong>
+                  Délai moyen constaté : <strong className="text-cyan-400">Moins de 45 min</strong>
                 </span>
               </div>
 
               <h1 className="text-3xl sm:text-5xl font-black text-white tracking-tight leading-tight">
                 Urgence Électrique 24h/24 & 7j/7 <br />
-                <span className="text-amber-400">Un électricien en route chez vous.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-300">Un électricien en route chez vous.</span>
               </h1>
 
               <p className="text-sm sm:text-base text-neutral-300 max-w-xl leading-relaxed">
@@ -78,14 +78,14 @@ export default function DepannageUrgencePage() {
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
                 <a
                   href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
-                  className="px-8 py-5 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 text-neutral-950 font-black text-sm uppercase tracking-wider rounded-2xl transition-all shadow-xl active:scale-95 flex items-center justify-center gap-3 border border-amber-300/40"
+                  className="px-8 py-5 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-500 hover:from-blue-500 hover:to-indigo-500 text-white font-black text-sm uppercase tracking-wider rounded-2xl transition-all shadow-xl shadow-blue-500/25 active:scale-95 flex items-center justify-center gap-3 border border-blue-400/40"
                   aria-label={`Appeler le standard dépannage ${COMPANY_INFO.phoneOffice}`}
                 >
-                  <div className="w-8 h-8 rounded-full bg-neutral-950 text-amber-400 flex items-center justify-center">
-                    <Phone className="w-4 h-4 fill-amber-400" />
+                  <div className="w-8 h-8 rounded-full bg-white/10 text-white flex items-center justify-center">
+                    <Phone className="w-4 h-4 fill-white text-white" />
                   </div>
                   <div className="flex flex-col text-left">
-                    <span className="text-[10px] uppercase tracking-wider text-neutral-900 leading-none font-bold">Appel d'Urgence</span>
+                    <span className="text-[10px] uppercase tracking-wider text-blue-100 leading-none font-bold">Appel d'Urgence</span>
                     <span className="text-base font-extrabold tracking-tight leading-none mt-1">{COMPANY_INFO.phoneOffice}</span>
                   </div>
                 </a>
@@ -94,7 +94,7 @@ export default function DepannageUrgencePage() {
                   href={`sms:${COMPANY_INFO.phoneMobileRaw}?body=URGENCE%20ELECTRIQUE%20-%20Adresse%20%3A%20(indiquez%20votre%20adresse)%20-%20Nature%20panne%20%3A%20...`}
                   className="px-6 py-5 bg-neutral-900 hover:bg-neutral-800 text-white border border-neutral-700 font-semibold text-xs rounded-2xl transition-colors active:scale-95 flex items-center justify-center gap-2.5"
                 >
-                  <MessageSquare className="w-4 h-4 text-amber-400" />
+                  <MessageSquare className="w-4 h-4 text-blue-400" />
                   <span>Envoyer un SMS d'Urgence ({COMPANY_INFO.phoneMobile})</span>
                 </a>
               </div>
@@ -128,19 +128,19 @@ export default function DepannageUrgencePage() {
         </div>
 
         {/* Safety First Advice While Waiting */}
-        <div className="p-6 sm:p-8 rounded-2xl bg-amber-50 border border-amber-200/90 text-amber-950 space-y-3">
-          <div className="flex items-center gap-2.5 text-amber-900 font-bold text-sm">
-            <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0" />
+        <div className="p-6 sm:p-8 rounded-2xl bg-blue-50/80 border border-blue-200/90 text-blue-950 space-y-3">
+          <div className="flex items-center gap-2.5 text-blue-900 font-bold text-sm">
+            <AlertTriangle className="w-5 h-5 text-blue-600 shrink-0" />
             <span>Consignes de sécurité immédiates en attendant notre passage</span>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-amber-900 leading-relaxed pt-1">
-            <div className="p-3 bg-white/80 rounded-xl border border-amber-200">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-xs text-blue-950 leading-relaxed pt-1">
+            <div className="p-3 bg-white/90 rounded-xl border border-blue-200/80">
               <strong>1. Ne touchez à aucun fil dénudé :</strong> Même isolé en apparence, un conducteur peut être sous tension dangereuse.
             </div>
-            <div className="p-3 bg-white/80 rounded-xl border border-amber-200">
+            <div className="p-3 bg-white/90 rounded-xl border border-blue-200/80">
               <strong>2. Coupez le disjoncteur général :</strong> Si vous sentez une odeur de chaud ou entendez un grésillement, basculez le disjoncteur principal sur OFF (0).
             </div>
-            <div className="p-3 bg-white/80 rounded-xl border border-amber-200">
+            <div className="p-3 bg-white/90 rounded-xl border border-blue-200/80">
               <strong>3. Débranchez les appareils sensibles :</strong> Ordinateurs, téléviseurs ou électroménager branchés sur la ligne incriminée.
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function DepannageUrgencePage() {
         {/* Diagnostic of Common Electrical Faults */}
         <div className="space-y-6">
           <div className="space-y-1">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-amber-600">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-blue-600">
               Pannes Fréquentes
             </h2>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-neutral-950 tracking-tight">
@@ -181,7 +181,7 @@ export default function DepannageUrgencePage() {
                 <div className="pt-3 border-t border-neutral-100 flex items-center justify-between">
                   <a
                     href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
-                    className="text-xs font-semibold text-amber-600 hover:text-amber-700 flex items-center gap-1"
+                    className="text-xs font-semibold text-blue-600 hover:text-blue-700 flex items-center gap-1"
                   >
                     <span>Demander l'intervention</span>
                     <ArrowRight className="w-3.5 h-3.5" />
@@ -229,7 +229,7 @@ export default function DepannageUrgencePage() {
               href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
               className="w-full sm:w-auto px-6 py-3.5 bg-neutral-950 hover:bg-neutral-800 text-white rounded-xl text-xs font-bold flex items-center justify-center gap-2 border border-neutral-800"
             >
-              <Phone className="w-4 h-4 text-amber-400 fill-amber-400" />
+              <Phone className="w-4 h-4 text-blue-400 fill-blue-400" />
               <span>Appeler le {COMPANY_INFO.phoneOffice}</span>
             </a>
           </div>

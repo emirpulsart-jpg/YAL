@@ -63,7 +63,7 @@ export default function DevisRendezVousPage() {
   const smsText = `Bonjour YAL Électricité, je souhaite un devis / RDV pour : ${selectedIntervention}. Contact : ${fullName} (${phone}). Besoin : ${description || 'Demande d\'intervention'}.`;
 
   return (
-    <div className="w-full bg-white selection:bg-amber-400 selection:text-neutral-950 py-12 lg:py-20">
+    <div className="w-full bg-white selection:bg-blue-600 selection:text-white py-12 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Breadcrumb & Title */}
         <div className="max-w-2xl space-y-3 mb-12">
@@ -102,7 +102,7 @@ export default function DevisRendezVousPage() {
                     href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
                     className="px-6 py-3 bg-neutral-950 hover:bg-neutral-800 text-white text-xs font-bold rounded-xl flex items-center justify-center gap-2 border border-neutral-800"
                   >
-                    <Phone className="w-4 h-4 text-amber-400 fill-amber-400" />
+                    <Phone className="w-4 h-4 text-blue-400 fill-blue-400" />
                     <span>Appeler directement au {COMPANY_INFO.phoneOffice}</span>
                   </a>
                   <button
@@ -136,9 +136,9 @@ export default function DevisRendezVousPage() {
                           }`}
                         >
                           <div className="flex items-center justify-between mb-2">
-                            <Icon className={`w-5 h-5 ${active ? 'text-amber-400' : 'text-neutral-700'}`} />
+                            <Icon className={`w-5 h-5 ${active ? 'text-blue-400' : 'text-neutral-700'}`} />
                             <span className={`text-[10px] px-2 py-0.5 rounded font-bold ${
-                              active ? 'bg-amber-400 text-neutral-950' : 'bg-neutral-100 text-neutral-600'
+                              active ? 'bg-blue-600 text-white' : 'bg-neutral-100 text-neutral-600'
                             }`}>
                               {item.badge}
                             </span>
@@ -226,7 +226,7 @@ export default function DevisRendezVousPage() {
                     type="submit"
                     className="w-full sm:flex-1 py-3.5 bg-neutral-950 hover:bg-neutral-800 text-white rounded-xl text-xs font-bold tracking-wide transition-all shadow-md active:scale-98 flex items-center justify-center gap-2"
                   >
-                    <Send className="w-3.5 h-3.5 text-amber-400" />
+                    <Send className="w-3.5 h-3.5 text-blue-400" />
                     <span>Envoyer ma demande ({selectedIntervention})</span>
                   </button>
 
@@ -234,7 +234,7 @@ export default function DevisRendezVousPage() {
                     href={`sms:${COMPANY_INFO.phoneMobileRaw}?body=${encodeURIComponent(smsText)}`}
                     className="w-full sm:w-auto px-5 py-3.5 bg-neutral-100 hover:bg-neutral-200 text-neutral-900 rounded-xl text-xs font-semibold transition-colors flex items-center justify-center gap-1.5 whitespace-nowrap"
                   >
-                    <MessageSquare className="w-3.5 h-3.5 text-amber-600" />
+                    <MessageSquare className="w-3.5 h-3.5 text-blue-600" />
                     <span>Envoyer en SMS direct</span>
                   </a>
                 </div>
@@ -281,8 +281,8 @@ export default function DevisRendezVousPage() {
 
             {/* Direct Phone Assistance Pod */}
             <div className="bg-neutral-950 text-white p-6 rounded-2xl border border-neutral-900 space-y-3">
-              <div className="flex items-center gap-2 text-amber-400 text-xs font-semibold">
-                <Phone className="w-4 h-4 fill-amber-400" />
+              <div className="flex items-center gap-2 text-blue-400 text-xs font-semibold">
+                <Phone className="w-4 h-4 fill-blue-400" />
                 <span>VOUS PRÉFÉREZ ÉCHANGER DIRECTEMENT ?</span>
               </div>
               <p className="text-xs text-neutral-300 leading-relaxed">
@@ -290,7 +290,7 @@ export default function DevisRendezVousPage() {
               </p>
               <a
                 href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
-                className="w-full py-3.5 bg-amber-500 hover:bg-amber-400 text-neutral-950 font-bold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2"
+                className="w-full py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2 border border-blue-400/30"
               >
                 Appeler le {COMPANY_INFO.phoneOffice}
               </a>

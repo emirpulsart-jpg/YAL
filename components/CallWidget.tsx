@@ -52,12 +52,12 @@ export function CallWidget() {
               className="flex items-center justify-between px-4 py-3 bg-neutral-950 hover:bg-neutral-800 text-white rounded-xl text-xs font-semibold tracking-wide transition-all shadow-md active:scale-98 border border-neutral-800"
             >
               <span className="flex items-center gap-2.5">
-                <div className="w-7 h-7 rounded-full bg-amber-400 text-neutral-950 flex items-center justify-center font-bold">
-                  <Phone className="w-3.5 h-3.5 fill-neutral-950 text-neutral-950" />
+                <div className="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+                  <Phone className="w-3.5 h-3.5 fill-white text-white" />
                 </div>
                 <span>Appeler maintenant</span>
               </span>
-              <span className="text-amber-300 text-xs font-bold">{COMPANY_INFO.phoneOffice}</span>
+              <span className="text-blue-300 text-xs font-bold">{COMPANY_INFO.phoneOffice}</span>
             </a>
 
             {/* Direct Native SMS */}
@@ -77,7 +77,7 @@ export function CallWidget() {
 
           <div className="mt-3 pt-2.5 border-t border-neutral-100 flex items-center justify-between text-[10px] text-neutral-500">
             <span className="flex items-center gap-1 font-medium">
-              <Zap className="w-3 h-3 text-amber-500 fill-amber-500" />
+              <Zap className="w-3 h-3 text-blue-500 fill-blue-500" />
               Réponse instantanée
             </span>
             <span>Annemasse & Région</span>
@@ -90,10 +90,10 @@ export function CallWidget() {
         {/* Direct Call Quick Button avec glow battement de coeur */}
         <a
           href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
-          className="animate-call-heartbeat flex items-center gap-2 pl-3.5 pr-4 py-2 bg-gradient-to-r from-amber-500 to-amber-600 text-neutral-950 font-bold text-xs rounded-full hover:brightness-105 transition-all shadow-md active:scale-95 whitespace-nowrap border border-amber-300/40"
+          className="animate-call-heartbeat flex items-center gap-2 pl-3.5 pr-4 py-2 bg-gradient-to-r from-blue-600 via-indigo-600 to-blue-700 text-white font-bold text-xs rounded-full hover:brightness-110 transition-all shadow-md shadow-blue-500/30 active:scale-95 whitespace-nowrap border border-blue-400/40"
           aria-label={`Appeler immédiatement le ${COMPANY_INFO.phoneOffice}`}
         >
-          <Phone className="w-3.5 h-3.5 fill-neutral-950 text-neutral-950" />
+          <Phone className="w-3.5 h-3.5 fill-white text-white" />
           <span>Appeler</span>
         </a>
 
@@ -103,14 +103,14 @@ export function CallWidget() {
           className="flex items-center gap-1.5 px-3 py-2 text-neutral-200 hover:text-white text-xs font-medium rounded-full hover:bg-neutral-800 transition-colors whitespace-nowrap"
           aria-label="Envoyer un SMS direct"
         >
-          <MessageSquare className="w-3.5 h-3.5 text-amber-400" />
+          <MessageSquare className="w-3.5 h-3.5 text-blue-400" />
           <span className="hidden sm:inline">SMS</span>
         </a>
 
         {/* Details / Mascot Toggle Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="relative w-8 h-8 rounded-full overflow-hidden bg-neutral-800 border border-neutral-700 flex items-center justify-center hover:border-amber-400 transition-colors"
+          className="relative w-8 h-8 rounded-full overflow-hidden bg-neutral-800 border border-neutral-700 flex items-center justify-center hover:border-blue-400 transition-colors"
           aria-label="Ouvrir le menu d'assistance"
         >
           <Image

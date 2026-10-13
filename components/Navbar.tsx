@@ -33,7 +33,7 @@ export function Navbar() {
           </div>
           <div className="hidden sm:flex items-center gap-4 text-neutral-400">
             <span className="flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+              <ShieldCheck className="w-3.5 h-3.5 text-blue-400" />
               Garantie Décennale AXA
             </span>
             <span className="text-neutral-600">·</span>
@@ -61,10 +61,10 @@ export function Navbar() {
                   active
                     ? 'text-neutral-950 font-bold'
                     : 'text-neutral-600 hover:text-neutral-950'
-                } ${link.isEmergency ? 'text-amber-600 hover:text-amber-700' : ''}`}
+                } ${link.isEmergency ? 'text-blue-600 hover:text-blue-700' : ''}`}
               >
                 <span className="flex items-center gap-1.5">
-                  {link.isEmergency && <Zap className="w-3.5 h-3.5 text-amber-500 fill-amber-500" />}
+                  {link.isEmergency && <Zap className="w-3.5 h-3.5 text-blue-500 fill-blue-500" />}
                   {link.label}
                 </span>
                 {active && (
@@ -82,11 +82,11 @@ export function Navbar() {
             className="group flex items-center gap-2.5 px-4 py-2.5 bg-neutral-950 hover:bg-neutral-800 text-white rounded-xl text-xs font-semibold tracking-wide transition-all shadow-sm active:scale-95 border border-neutral-800"
             aria-label={`Appeler le ${COMPANY_INFO.phoneOffice}`}
           >
-            <div className="w-7 h-7 rounded-full bg-amber-400 text-neutral-950 flex items-center justify-center font-bold">
-              <Phone className="w-3.5 h-3.5 fill-neutral-950 text-neutral-950" />
+            <div className="w-7 h-7 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold">
+              <Phone className="w-3.5 h-3.5 fill-white text-white" />
             </div>
             <div className="flex flex-col text-left leading-tight">
-              <span className="text-[10px] text-amber-300 font-medium">Appel Direct</span>
+              <span className="text-[10px] text-blue-300 font-medium">Appel Direct</span>
               <span className="font-bold text-white tracking-normal text-xs">{COMPANY_INFO.phoneOffice}</span>
             </div>
           </a>
@@ -96,10 +96,10 @@ export function Navbar() {
         <div className="flex items-center gap-2 lg:hidden">
           <a
             href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
-            className="p-2.5 bg-neutral-950 text-amber-400 rounded-xl flex items-center justify-center active:scale-95 border border-neutral-800"
+            className="p-2.5 bg-neutral-950 text-blue-400 rounded-xl flex items-center justify-center active:scale-95 border border-neutral-800"
             aria-label="Appeler maintenant"
           >
-            <Phone className="w-4 h-4 fill-amber-400 text-amber-400" />
+            <Phone className="w-4 h-4 fill-blue-400 text-blue-400" />
           </a>
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -129,7 +129,7 @@ export function Navbar() {
                   }`}
                 >
                   <span className="flex items-center gap-2">
-                    {link.isEmergency && <Zap className="w-4 h-4 text-amber-500 fill-amber-500" />}
+                    {link.isEmergency && <Zap className="w-4 h-4 text-blue-500 fill-blue-500" />}
                     {link.label}
                   </span>
                   <ArrowUpRight className="w-4 h-4 text-neutral-400" />
@@ -143,12 +143,12 @@ export function Navbar() {
               href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
               className="w-full flex items-center justify-center gap-2 py-3 bg-neutral-950 text-white rounded-xl text-sm font-bold active:scale-98"
             >
-              <Phone className="w-4 h-4 text-amber-400 fill-amber-400" />
+              <Phone className="w-4 h-4 text-blue-400 fill-blue-400" />
               Appeler le {COMPANY_INFO.phoneOffice}
             </a>
             <a
               href={`sms:${COMPANY_INFO.phoneMobileRaw}?body=Bonjour%20YAL%20%C3%89lectricit%C3%A9%2C%20je%20souhaite%20des%20renseignements%20pour...`}
-              className="w-full flex items-center justify-center gap-2 py-3 bg-amber-50 text-amber-900 border border-amber-200/80 rounded-xl text-sm font-semibold active:scale-98"
+              className="w-full flex items-center justify-center gap-2 py-3 bg-blue-50 text-blue-950 border border-blue-200/80 rounded-xl text-sm font-semibold active:scale-98"
             >
               Envoyer un SMS rapide ({COMPANY_INFO.phoneMobile})
             </a>

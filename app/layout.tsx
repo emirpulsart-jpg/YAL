@@ -37,19 +37,6 @@ export default function RootLayout({
     description: COMPANY_INFO.tagline,
     telephone: COMPANY_INFO.phoneOffice,
     email: COMPANY_INFO.email,
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: COMPANY_INFO.address.street,
-      addressLocality: COMPANY_INFO.address.city,
-      postalCode: COMPANY_INFO.address.zipCode,
-      addressRegion: COMPANY_INFO.address.region,
-      addressCountry: COMPANY_INFO.address.country,
-    },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: 46.1932,
-      longitude: 6.2341,
-    },
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -78,7 +65,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="min-h-screen bg-white text-neutral-900 font-sans antialiased selection:bg-amber-400 selection:text-neutral-950 flex flex-col justify-between">
+      <body className="min-h-screen bg-white text-neutral-900 font-sans antialiased selection:bg-blue-600 selection:text-white flex flex-col justify-between">
         <Navbar />
         <main className="flex-1 w-full">{children}</main>
         <CallWidget />

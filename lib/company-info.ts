@@ -18,15 +18,9 @@ export const COMPANY_INFO = {
   // Adresse email
   email: "elec@yal-one.com",
   
-  // Adresse physique réelle
-  address: {
-    street: "4 Allée des Champs Jacquis",
-    zipCode: "74100",
-    city: "Annemasse",
-    region: "Haute-Savoie",
-    country: "France",
-    full: "4 Allée des Champs Jacquis, 74100 Annemasse",
-  },
+  // Service itinérant - Pas d'adresse fixe
+  serviceType: "Artisan électricien itinérant (interventions directes sur site)",
+  region: "Haute-Savoie, Savoie & Isère",
   
   // Rayon & Zones desservies
   interventionZone: {

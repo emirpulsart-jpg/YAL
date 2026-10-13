@@ -30,7 +30,7 @@ export default function ContactPage() {
   const smsDirect = `Bonjour YAL Électricité, je vous contacte : ${fullName || 'Client'} (${phone || 'sans tél'}). Besoin : ${description || 'Demande d\'intervention'}`;
 
   return (
-    <div className="w-full bg-white selection:bg-amber-400 selection:text-neutral-950 py-12 lg:py-20">
+    <div className="w-full bg-white selection:bg-blue-600 selection:text-white py-12 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Header Breadcrumb & Title */}
         <div className="max-w-2xl space-y-4">
@@ -56,11 +56,11 @@ export default function ContactPage() {
           {/* Card 1: Téléphone Standard */}
           <div className="p-6 rounded-2xl bg-neutral-950 text-white space-y-4 flex flex-col justify-between">
             <div className="space-y-3">
-              <div className="w-10 h-10 rounded-xl bg-amber-400 text-neutral-950 flex items-center justify-center font-bold">
-                <Phone className="w-5 h-5 fill-neutral-950" />
+              <div className="w-10 h-10 rounded-xl bg-blue-600 text-white flex items-center justify-center font-bold">
+                <Phone className="w-5 h-5 fill-white" />
               </div>
               <div>
-                <span className="text-xs uppercase text-amber-400 tracking-wider font-semibold">Ligne Directe</span>
+                <span className="text-xs uppercase text-blue-400 tracking-wider font-semibold">Ligne Directe</span>
                 <h3 className="text-base font-bold text-white mt-0.5">Appel Téléphonique</h3>
                 <p className="text-xs text-neutral-400 mt-1 leading-relaxed">
                   Joignable directement pour toute question ou dépannage.
@@ -69,7 +69,7 @@ export default function ContactPage() {
             </div>
             <a
               href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
-              className="mt-4 block py-2.5 px-3.5 bg-neutral-900 hover:bg-neutral-800 text-amber-300 text-xs font-bold rounded-xl text-center border border-neutral-800 transition-colors"
+              className="mt-4 block py-2.5 px-3.5 bg-neutral-900 hover:bg-neutral-800 text-blue-300 hover:text-blue-200 text-xs font-bold rounded-xl text-center border border-neutral-800 transition-colors"
             >
               {COMPANY_INFO.phoneOffice}
             </a>
@@ -119,22 +119,22 @@ export default function ContactPage() {
             </a>
           </div>
 
-          {/* Card 4: Siège Réel */}
+          {/* Card 4: Service Itinérant */}
           <div className="p-6 rounded-2xl bg-white border border-neutral-200/90 hover:border-neutral-950 transition-colors space-y-4 flex flex-col justify-between shadow-sm">
             <div className="space-y-3">
               <div className="w-10 h-10 rounded-xl bg-neutral-100 text-neutral-900 flex items-center justify-center">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-xs uppercase text-neutral-500 tracking-wider font-semibold">Adresse Réelle</span>
-                <h3 className="text-base font-bold text-neutral-950 mt-0.5">Siège de l'Entreprise</h3>
+                <span className="text-xs uppercase text-neutral-500 tracking-wider font-semibold">Service Itinérant</span>
+                <h3 className="text-base font-bold text-neutral-950 mt-0.5">Interventions sur Site</h3>
                 <p className="text-xs text-neutral-600 mt-1 leading-relaxed">
-                  {COMPANY_INFO.address.full}
+                  Entreprise 100% mobile : notre artisan électricien se déplace directement chez vous avec tout l'équipement nécessaire.
                 </p>
               </div>
             </div>
             <div className="mt-4 py-2.5 px-3 bg-neutral-50 text-xs text-neutral-700 rounded-xl border border-neutral-200 text-center font-medium">
-              Annemasse, Haute-Savoie, Savoie & Isère
+              Haute-Savoie, Savoie & Isère
             </div>
           </div>
         </div>
@@ -232,7 +232,7 @@ export default function ContactPage() {
                     type="submit"
                     className="w-full sm:flex-1 py-3.5 bg-neutral-950 hover:bg-neutral-800 text-white rounded-xl text-xs font-bold tracking-wide transition-all shadow-md active:scale-98 flex items-center justify-center gap-2"
                   >
-                    <Send className="w-3.5 h-3.5 text-amber-400" />
+                    <Send className="w-3.5 h-3.5 text-blue-400" />
                     <span>Envoyer ma demande</span>
                   </button>
 
@@ -240,7 +240,7 @@ export default function ContactPage() {
                     href={`sms:${COMPANY_INFO.phoneMobileRaw}?body=${encodeURIComponent(smsDirect)}`}
                     className="w-full sm:w-auto px-5 py-3.5 bg-neutral-100 hover:bg-neutral-200 text-neutral-900 rounded-xl text-xs font-semibold transition-colors flex items-center justify-center gap-2"
                   >
-                    <MessageSquare className="w-3.5 h-3.5 text-amber-600" />
+                    <MessageSquare className="w-3.5 h-3.5 text-blue-600" />
                     <span>Envoyer en SMS</span>
                   </a>
                 </div>
@@ -257,7 +257,7 @@ export default function ContactPage() {
           <div className="lg:col-span-5 space-y-6">
             <div className="p-6 rounded-3xl bg-neutral-50 border border-neutral-200/90 space-y-4">
               <div className="flex items-center gap-2 text-neutral-950 font-bold text-sm">
-                <Clock className="w-4 h-4 text-amber-600" />
+                <Clock className="w-4 h-4 text-blue-600" />
                 <span>Horaires & Disponibilité</span>
               </div>
 
@@ -268,7 +268,7 @@ export default function ContactPage() {
                 </div>
 
                 <div className="p-3.5 bg-neutral-950 text-white rounded-xl border border-neutral-900">
-                  <div className="font-semibold text-amber-400 flex items-center gap-1.5">
+                  <div className="font-semibold text-blue-400 flex items-center gap-1.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                     Dépannage d'Urgence :
                   </div>
@@ -278,16 +278,16 @@ export default function ContactPage() {
             </div>
 
             <div className="p-6 rounded-3xl bg-neutral-950 text-white space-y-4 border border-neutral-900">
-              <span className="text-xs uppercase text-amber-400 font-bold">Un problème urgent ?</span>
+              <span className="text-xs uppercase text-blue-400 font-bold">Un problème urgent ?</span>
               <h3 className="text-lg font-bold text-white">Appelez directement sans attendre</h3>
               <p className="text-xs text-neutral-300 leading-relaxed">
                 Pour une coupure totale, une odeur suspecte ou un disjoncteur qui saute, l'appel téléphonique reste le moyen le plus direct.
               </p>
               <a
                 href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
-                className="w-full py-3.5 bg-amber-500 hover:bg-amber-400 text-neutral-950 font-bold text-xs uppercase tracking-wider rounded-xl transition-all flex items-center justify-center gap-2"
+                className="w-full py-3.5 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md flex items-center justify-center gap-2 border border-blue-400/30"
               >
-                <Phone className="w-4 h-4 fill-neutral-950" />
+                <Phone className="w-4 h-4 fill-white" />
                 <span>Appeler le {COMPANY_INFO.phoneOffice}</span>
               </a>
             </div>
@@ -297,7 +297,7 @@ export default function ContactPage() {
         {/* Regional Zones Section */}
         <div className="space-y-6 pt-4">
           <div className="space-y-1">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-amber-600">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-blue-600">
               Périmètre d'Intervention
             </h2>
             <h3 className="text-2xl font-bold text-neutral-950">

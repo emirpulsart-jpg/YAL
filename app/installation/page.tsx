@@ -36,7 +36,7 @@ const INSTALLATION_SERVICES = [
 
 export default function InstallationPage() {
   return (
-    <div className="w-full bg-white selection:bg-amber-400 selection:text-neutral-950 py-12 lg:py-20">
+    <div className="w-full bg-white selection:bg-blue-600 selection:text-white py-12 lg:py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
         {/* Page Header */}
         <div className="max-w-3xl space-y-4">
@@ -58,15 +58,15 @@ export default function InstallationPage() {
 
           <div className="pt-2 flex flex-wrap items-center gap-4 text-xs font-semibold text-neutral-800">
             <span className="flex items-center gap-1.5 px-3 py-1.5 bg-neutral-100 rounded-lg">
-              <ShieldCheck className="w-4 h-4 text-amber-600" />
+              <ShieldCheck className="w-4 h-4 text-blue-600" />
               Garantie Décennale AXA
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1.5 bg-neutral-100 rounded-lg">
-              <Award className="w-4 h-4 text-amber-600" />
+              <Award className="w-4 h-4 text-blue-600" />
               Agrément Qualifelec
             </span>
             <span className="flex items-center gap-1.5 px-3 py-1.5 bg-neutral-100 rounded-lg">
-              <Zap className="w-4 h-4 text-amber-600" />
+              <Zap className="w-4 h-4 text-blue-600" />
               Attestation Consuel
             </span>
           </div>
@@ -84,7 +84,7 @@ export default function InstallationPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/20 to-transparent flex items-end p-6 sm:p-10">
             <div className="text-white max-w-xl">
-              <div className="text-amber-400 text-xs uppercase tracking-wider mb-1 font-bold">Architecture Basse Tension</div>
+              <div className="text-blue-400 text-xs uppercase tracking-wider mb-1 font-bold">Architecture Basse Tension</div>
               <h2 className="text-xl sm:text-2xl font-bold">Infrastructures électriques fiables pour les décennies à venir</h2>
             </div>
           </div>
@@ -93,7 +93,7 @@ export default function InstallationPage() {
         {/* Services Grid */}
         <div className="space-y-6">
           <div className="space-y-1">
-            <h2 className="text-xs font-bold uppercase tracking-wider text-amber-600">
+            <h2 className="text-xs font-bold uppercase tracking-wider text-blue-600">
               Prestations d'Installation
             </h2>
             <h3 className="text-2xl sm:text-3xl font-extrabold text-neutral-950 tracking-tight">
@@ -119,7 +119,7 @@ export default function InstallationPage() {
                 <div className="space-y-2 pt-2 border-t border-neutral-100">
                   {srv.features.map((feat, fIdx) => (
                     <div key={fIdx} className="flex items-center gap-2 text-xs text-neutral-700">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-blue-500 shrink-0" />
                       <span>{feat}</span>
                     </div>
                   ))}
@@ -132,25 +132,25 @@ export default function InstallationPage() {
         {/* Process Steps */}
         <div className="p-8 sm:p-12 rounded-3xl bg-neutral-950 text-white space-y-8">
           <div className="max-w-xl space-y-2">
-            <span className="text-xs uppercase text-amber-400 font-bold">Méthodologie de Travail</span>
+            <span className="text-xs uppercase text-blue-400 font-bold">Méthodologie de Travail</span>
             <h3 className="text-2xl font-bold text-white">Comment se déroule votre chantier d'installation ?</h3>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             <div className="space-y-2 p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
-              <span className="text-amber-400 font-bold text-lg">01. Étude & Devis</span>
+              <span className="text-blue-400 font-bold text-lg">01. Étude & Devis</span>
               <p className="text-xs text-neutral-400 leading-relaxed">
                 Visite technique ou analyse de plans pour quantifier les besoins de puissance, le nombre de départs et la conformité.
               </p>
             </div>
             <div className="space-y-2 p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
-              <span className="text-amber-400 font-bold text-lg">02. Pose & Raccordement</span>
+              <span className="text-blue-400 font-bold text-lg">02. Pose & Raccordement</span>
               <p className="text-xs text-neutral-400 leading-relaxed">
                 Pose rigoureuse des gaines, appareillages et protections avec du matériel certifié de constructeurs leaders.
               </p>
             </div>
             <div className="space-y-2 p-5 rounded-2xl bg-neutral-900 border border-neutral-800">
-              <span className="text-amber-400 font-bold text-lg">03. Tests & Réception</span>
+              <span className="text-blue-400 font-bold text-lg">03. Tests & Réception</span>
               <p className="text-xs text-neutral-400 leading-relaxed">
                 Mesure de boucle de terre, test des différentiels au déclencheur calibré et remise du dossier de conformité.
               </p>
@@ -173,7 +173,7 @@ export default function InstallationPage() {
             </Link>
             <a
               href={`tel:${COMPANY_INFO.phoneOfficeRaw}`}
-              className="w-full sm:w-auto px-5 py-3 bg-amber-500 hover:bg-amber-400 text-neutral-950 text-xs font-bold rounded-xl text-center border border-amber-300/40"
+              className="w-full sm:w-auto px-5 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white text-xs font-bold rounded-xl text-center border border-blue-400/30 shadow-md"
             >
               Appel direct : {COMPANY_INFO.phoneOffice}
             </a>
