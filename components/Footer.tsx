@@ -16,7 +16,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 pb-12 border-b border-neutral-100">
           {/* Col 1 & 2: Brand identity & statement */}
           <div className="lg:col-span-2 space-y-4">
-            <YalLogo size="md" showSubtitle={false} />
+            <YalLogo size="md" />
             <p className="text-sm text-neutral-600 max-w-sm leading-relaxed">
               Entreprise artisanale spécialisée dans l'électricité générale, la rénovation soignée et le dépannage 24/24 et 7j/7 basée à Annemasse.
             </p>

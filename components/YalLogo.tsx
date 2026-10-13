@@ -14,56 +14,37 @@ interface YalLogoProps {
 export function YalLogo({
   className = '',
   size = 'md',
-  showSubtitle = false,
   asLink = true,
 }: YalLogoProps) {
-  // Proportions exactes 1:1 carrées sans aucune déformation (object-contain)
+  // Proportions exactes 1:1 du fichier logo envoyé (1024x1024)
   const sizeMap = {
-    sm: { width: 48, height: 48, text: 'text-[9px] tracking-[0.25em]' },
-    md: { width: 68, height: 68, text: 'text-[11px] tracking-[0.28em]' },
-    lg: { width: 92, height: 92, text: 'text-[13px] tracking-[0.3em]' },
-    xl: { width: 128, height: 128, text: 'text-[15px] tracking-[0.35em]' },
+    sm: { width: 50, height: 50 },
+    md: { width: 75, height: 75 },
+    lg: { width: 95, height: 95 },
+    xl: { width: 120, height: 120 },
   };
 
-  const { width, height, text } = sizeMap[size];
+  const { width, height } = sizeMap[size];
 
   const content = (
-    <div className={`inline-flex items-center gap-2.5 select-none group ${className}`}>
-      {/* Affichage direct et pur du fichier logo d'origine sans distorsion */}
-      <div 
-        className="relative shrink-0 flex items-center justify-center aspect-square"
-        style={{ width, height }}
-      >
-        <Image
-          src="/logo.png"
-          alt="Logo YAL"
-          width={width}
-          height={height}
-          priority
-          className="w-full h-full object-contain transition-transform duration-300 group-hover:scale-102"
-          referrerPolicy="no-referrer"
-        />
-      </div>
-
-      {showSubtitle && (
-        <div className="flex flex-col justify-center">
-          <span className="font-extrabold text-neutral-950 tracking-tight text-lg leading-none">
-            YAL
-          </span>
-          <div className="flex items-center gap-1.5 mt-1">
-            <span className={`font-semibold uppercase text-neutral-800 ${text} leading-none`}>
-              ÉLECTRICITÉ
-            </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-500 shadow-sm" />
-          </div>
-        </div>
-      )}
+    <div className={`inline-flex items-center shrink-0 select-none ${className}`}>
+      {/* Affichage exact du fichier logo.png officiel */}
+      <Image
+        src="/logo.png"
+        alt="YAL"
+        width={width}
+        height={height}
+        priority
+        unoptimized
+        className="w-auto h-auto max-h-[75px] object-contain rounded-lg"
+        referrerPolicy="no-referrer"
+      />
     </div>
   );
 
   if (asLink) {
     return (
-      <Link href="/" className="inline-block" aria-label="Retour à l'accueil YAL Électricité">
+      <Link href="/" className="inline-flex items-center shrink-0" aria-label="Accueil YAL">
         {content}
       </Link>
     );

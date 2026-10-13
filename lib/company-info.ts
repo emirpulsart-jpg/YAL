@@ -10,13 +10,13 @@ export const COMPANY_INFO = {
   tagline: "Artisan Électricien Qualifié · 24h/24 & 7j/7 · Dépannage & Installations de Prestige",
   
   // Coordonnées téléphoniques & SMS
-  phoneOffice: "07 82 04 81 44",
-  phoneOfficeRaw: "+33782048144",
-  phoneMobile: "07 82 04 81 44",
-  phoneMobileRaw: "+33782048144",
+  phoneOffice: "06 09 69 42 01",
+  phoneOfficeRaw: "+33609694201",
+  phoneMobile: "06 09 69 42 01",
+  phoneMobileRaw: "+33609694201",
   
   // Adresse email
-  email: "contact@yal-electricite.fr",
+  email: "elec@yal-one.com",
   
   // Adresse physique réelle
   address: {

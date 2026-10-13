@@ -44,9 +44,9 @@ export function Navbar() {
 
       {/* Main 3-Zone Navigation Bar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-        {/* Zone 1: Uniquement le logo Yal (sans texte écrit à côté) */}
+        {/* Zone 1: Uniquement le logo Yal d'origine */}
         <div className="flex items-center">
-          <YalLogo size="md" showSubtitle={false} />
+          <YalLogo size="md" />
         </div>
 
         {/* Zone 2: Navigation Links */}
