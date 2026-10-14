@@ -18,7 +18,7 @@ export function Footer() {
           <div className="lg:col-span-2 space-y-4">
             <YalLogo size="md" />
             <p className="text-sm text-neutral-600 max-w-sm leading-relaxed">
-              Entreprise artisanale spécialisée dans l'électricité générale, la rénovation soignée et le dépannage 24/24 et 7j/7 basée à Annemasse.
+              Entreprise artisanale spécialisée dans l'électricité générale, la rénovation soignée et le dépannage 24/24 et 7j/7 en Haute-Savoie, Savoie et Isère.
             </p>
             <div className="flex flex-wrap gap-2 pt-2">
               <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-neutral-100 text-neutral-800 rounded text-xs font-medium">

@@ -115,7 +115,7 @@ export default function DepannageUrgencePage() {
             <div className="lg:col-span-5 relative flex justify-center">
               <div className="relative aspect-[3/4] w-64 sm:w-72 rounded-3xl overflow-hidden bg-neutral-900/80 border border-neutral-800 p-3 shadow-inner flex items-center justify-center">
                 <Image
-                  src="/images/mascot-urgence.jpg"
+                  src="/images/mascot-urgence.png"
                   alt="Mascotte YAL Électricité glissant sur un câble pour une urgence rapide"
                   fill
                   className="object-contain p-2"
